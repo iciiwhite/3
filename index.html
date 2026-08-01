@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DroidTDN - Finance Platform</title>
+<link rel="stylesheet" href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="doom-1.0.0.js"></script>
+<!-- <?doom embed="style && script">
+style lucide;
+script tailwindcss;
+</doom> -->
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased">
+<div id="app" class="flex min-h-screen">
+<aside id="sidebar" class="fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 border-r border-gray-800 transform -translate-x-full transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-auto lg:h-screen">
+<div class="flex items-center h-16 px-6 border-b border-gray-800">
+<img src="custom/droidtdn-logo.svg" alt="DroidTDN Logo" class="w-8 h-8 mr-3" onerror="this.style.display='none'">
+<span class="text-xl font-bold text-purple-400 tracking-tight">DroidTDN</span>
+</div>
+<nav class="mt-6 px-4 space-y-1">
+<a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+<i class="icon icon-layout-dashboard w-5 h-5 mr-3"></i>
+<span>Dashboard</span>
+</a>
+<a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+<i class="icon icon-bot w-5 h-5 mr-3"></i>
+<span>Droids</span>
+</a>
+<a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+<i class="icon icon-user w-5 h-5 mr-3"></i>
+<span>Account</span>
+</a>
+<a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+<i class="icon icon-share-2 w-5 h-5 mr-3"></i>
+<span>Share</span>
+</a>
+<a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
+<i class="icon icon-settings w-5 h-5 mr-3"></i>
+<span>Settings</span>
+</a>
+</nav>
+</aside>
+<div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden" onclick="toggleSidebar()"></div>
+<main class="flex-1 flex flex-col w-full lg:pl-0">
+<header class="sticky top-0 z-30 flex items-center justify-between h-16 px-6 bg-gray-900/80 backdrop-blur border-b border-gray-800 lg:px-8">
+<button class="lg:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800" onclick="toggleSidebar()">
+<i class="icon icon-menu w-6 h-6"></i>
+</button>
+<div class="flex items-center lg:hidden">
+<img src="custom/droidtdn-logo.svg" alt="DroidTDN Logo" class="w-7 h-7 mr-2" onerror="this.style.display='none'">
+<span class="text-lg font-bold text-purple-400">DroidTDN</span>
+</div>
+<div class="hidden lg:flex items-center space-x-4">
+</div>
+</header>
+<div class="p-6 lg:p-8">
+<h1 class="text-2xl font-bold">Welcome to DroidTDN</h1>
+<p class="mt-2 text-gray-400">Your online finance dashboard is ready.</p>
+</div>
+</main>
+</div>
+<script>
+(function() {
+  window.toggleSidebar = function() {
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('sidebar-overlay');
+    sidebar.classList.toggle('-translate-x-full');
+    overlay.classList.toggle('hidden');
+  };
+})();
+</script>
+</body>
+</html>
